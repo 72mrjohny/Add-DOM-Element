@@ -46,6 +46,20 @@ body {
     max-width: 1200px;
     margin: 0 auto;
 }
+
+.result {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-between;
+}
+.result__info {
+    flex-basis: 100%;
+}
+.element-info {
+    flex-basis: 30%;
+}
+
 .content {
     margin-top: 20px;
     margin-bottom: 20px;
