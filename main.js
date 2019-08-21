@@ -4,6 +4,9 @@ const clearForm = () => {
     addForm.elements.attr.value = '';
     addForm.elements.value.value = '';
 }
+const clearForm2 = () => {
+    searchForm.elements['searching-element'].value = '';
+}
 
 const addElement = (e, node, txt, attr, value) => {
     e.preventDefault();
@@ -31,9 +34,10 @@ const searchElements = (e, nameElement) => {
         showInfo(elements, infoElement);
     } else {
         infoElement.innerHTML = `<p class="result__info">W dokumencie nie znaleziono elementów <strong>${nameElement} </strong></p>`;
+        clearForm2();
         return;
     }
-
+    clearForm2();
 }
 
 const showInfo = (elements, infoElement) => {
